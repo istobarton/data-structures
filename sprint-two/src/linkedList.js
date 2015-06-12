@@ -15,10 +15,38 @@ var LinkedList = function(){
   };
 
   list.removeHead = function(){
-
+    var temp;
+    if(list.head===list.tail){
+      temp = list.head.value;
+      list.head = null;
+      list.tail = null;
+      return temp;
+    }
+    else{
+      temp = list.head.value;
+      list.head = list.head.next;
+      return temp;
+    }
   };
 
   list.contains = function(target){
+    var result = false;
+    var currentNode = list.head;
+    while (currentNode !== list.tail){
+     if (currentNode.value === target){
+      result = true;
+      break;
+     } else {
+      currentNode = currentNode.next;
+     }
+    }
+
+    if (currentNode.value === target)
+    {
+        result = true;
+    }
+
+    return result;
   };
 
   return list;
