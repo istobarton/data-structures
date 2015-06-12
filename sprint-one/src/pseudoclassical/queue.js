@@ -16,7 +16,6 @@ Queue.prototype.enqueue = function(value){
 
 Queue.prototype.dequeue = function(){
   var temp = this.storage[0];
-  debugger;
   for(var i=1; i<this.queueSize; i++){
     this.storage[i-1]=this.storage[i];
   }
