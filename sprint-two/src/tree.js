@@ -2,15 +2,10 @@ var Tree = function(value){
   var newTree = {};
   newTree.value = value;
   _.extend(newTree,treeMethods);
-
-  // your code here
-  newTree.children = [];  // fix me
+  newTree.children = [];
 
   return newTree;
 };
-
-
-
 
 
 var treeMethods = {};
@@ -26,11 +21,10 @@ treeMethods.contains = function(target){
   if(this.value===target){
     isFound = true;
     return isFound;
-  }
-  else if(length>0){
+  }else if(length>0){
     for(var i = 0; i<length; i++){
       if(this.children[i].contains(target)){
-        isFound = true
+        isFound = true;
       }
     }
   }
@@ -40,4 +34,6 @@ treeMethods.contains = function(target){
 
 /*
  * Complexity: What is the time complexity of the above functions?
+ * Insertion: O(n)
+ * Search: O(n)
  */

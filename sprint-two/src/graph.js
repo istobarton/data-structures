@@ -1,8 +1,4 @@
-
-
 var Graph = function(){
-  //properties that are needed at time of creation
-  //and different for each Graph node
   this.gObj = {};
   this.connection = {};
 };
@@ -29,7 +25,7 @@ Graph.prototype.addEdge = function(fromNode, toNode){
   var edge1 = fromNode + toNode;
   var edge2 = toNode + fromNode;
   this.connection[edge1] = edge1;
-  this.connection[edge2] = edge2
+  this.connection[edge2] = edge2;
 };
 
 Graph.prototype.removeEdge = function(fromNode, toNode){

@@ -21,8 +21,7 @@ var LinkedList = function(){
       list.head = null;
       list.tail = null;
       return temp;
-    }
-    else{
+    } else {
       temp = list.head.value;
       list.head = list.head.next;
       return temp;
@@ -37,13 +36,12 @@ var LinkedList = function(){
       result = true;
       break;
      } else {
-      currentNode = currentNode.next;
+       currentNode = currentNode.next;
      }
     }
 
-    if (currentNode.value === target)
-    {
-        result = true;
+    if (currentNode.value === target){
+      result = true;
     }
 
     return result;
@@ -63,4 +61,7 @@ var Node = function(value){
 
 /*
  * Complexity: What is the time complexity of the above functions?
+ * Insertion / Deletion: O(1)
+ * Search: O(n)
  */
+

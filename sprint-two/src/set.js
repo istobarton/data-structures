@@ -7,7 +7,7 @@ var Set = function(){
 var setPrototype = {};
 
 setPrototype.add = function(item){
-  this.storage[item] = item
+  this.storage[item] = item;
 };
 
 setPrototype.contains = function(item){
@@ -20,4 +20,6 @@ setPrototype.remove = function(item){
 
 /*
  * Complexity: What is the time complexity of the above functions?
+ *Insertion, Deletion: o(1)
+ *Search: o(n)
  */
